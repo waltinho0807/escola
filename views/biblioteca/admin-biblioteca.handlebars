@@ -1,0 +1,156 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Administação Biblioteca</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/biblioteca/cadastrar-livro" class="btn btn-outline-warning btn-sm">Cadastrar Livro</a>
+                </span>
+
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        <a class="dropdown-item" href="/biblioteca/cadastrar-livro">Cadastrar Livro </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        <span>Filtrar Por:</span>
+        <form action="/biblioteca/pesquisa-titulo" method="POST">
+            <div class="form-group col-md-6">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" placeholder="Titulo" name="titulo" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="submit" class="btn btn-primary" placeholder="Filtrar">
+            </div>
+        </form>
+
+        <form action="/biblioteca/pesquisa-autor" method="POST">
+            <div class="form-group col-md-6">
+                <label for="titulo">Autor</label>
+                <input type="text" class="form-control" placeholder="Autor" name="autor" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="submit" class="btn btn-primary" placeholder="Filtrar">
+            </div>
+        </form>
+
+        <form action="/biblioteca/pesquisa-editora" method="POST">
+            <div class="form-group col-md-6">
+                <label for="titulo">Editora</label>
+                <input type="text" class="form-control" placeholder="Editora" name="editar" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="submit" class="btn btn-primary" placeholder="Filtrar">
+            </div>
+        </form>
+
+        <div class="form-group col-md-6">
+            <div class="form-field">
+                <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="">Selecione Categoria</option>
+                        <option value="biografias">Biografias</option>
+                        <option value="folclore">Folclore</option>
+                        <option value="romance">Romance</option>
+                        <option value="poesia">Poesia</option>
+                        <option value="contos">Contos</option>
+                        <option value="humor">Humor</option>
+                        <option value="culinaria">Culinária</option>
+                        <option value="pedagogia">Pedagogia</option>
+                        <option value="geografia">Geografia</option>
+                        <option value="historiageral">História Geral</option>
+                        <option value="literaturabrasileira">Literatura Brasileira</option>
+                        <option value="literaturaestrangeira">Literatura Estrangeira</option>
+                        <option value="idiomas">Ensino de Idiomas</option>
+                        <option value="biologia">Biologia</option>
+                        <option value="autoajuda">Auto ajuda</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="enciclopedia">Enciclopédias</option>
+                        <option value="didaticos">Didáticos</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        {{#each biblioteca.docs}}
+        <dl class="row">
+
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{_id}}</dd>
+
+            <dt class="col-sm-3">Titulo </dt>
+            <dd class="col-sm-9">{{titulo}}</dd>
+
+            <dt class="col-sm-3">Editora</dt>
+            <dd class="col-sm-9">{{subtitulo}} </dd>
+
+            <dt class="col-sm-3">Autor</dt>
+            <dd class="col-sm-9">{{autor}}</dd>
+
+            <dt class="col-sm-3">Foto Capa</dt>
+            <dd class="col-sm-9"><img class="circle" src="/images/biblioteca/{{fotocapa}}" width="80" height="80"></dd>
+
+
+
+
+
+
+        </dl>
+        <a href="/biblioteca/vis-livro/{{_id}}" class="btn btn-warning">Visualisar</a>
+        <a href="/biblioteca/edit-livro/{{_id}}" class="btn btn-warning">Editar</a>
+        <a href="/biblioteca/delete-livro/{{_id}}" class="btn btn-danger">Excluir</a>
+
+        <hr>
+        {{/each}}
+    </div>
+
+    <nav aria-label="paginacao">
+        <ul class="pagination pagination-sm justify-content-center">
+            {{#if biblioteca.hasPrevPage}}
+            <li class="page-item">
+                <a class="page-link" href="/blog/visualisar-blog" tabindex="-1">Primeira</a>
+            </li>
+            <li class="page-item"><a class="page-link"
+                    href="/blog/visualisar-blog?page={{biblioteca.prevPage}}">{{biblioteca.prevPage}}</a></li>
+            {{else}}
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Primeira</a>
+            </li>
+            {{/if}}
+
+            <li class="page-item active">
+                <a class="page-link" href="#">{{biblioteca.page}}</a>
+            </li>
+
+            {{#if biblioteca.hasNextPage}}
+            <li class="page-item"><a class="page-link"
+                    href="/blog/visualisar-blog?page={{biblioteca.nextPage}}">{{biblioteca.nextPage}}</a></li>
+            <li class="page-item">
+                <a class="page-link" href="/blog/visualisar-blog?page={{biblioteca.totalPages}}">Última</a>
+            </li>
+            {{else}}
+            <li class="page-item disabled">
+                <a class="page-link" href="#">Última</a>
+            </li>
+            {{/if}}
+
+
+        </ul>
+    </nav>
+
+</div>

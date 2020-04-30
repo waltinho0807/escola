@@ -1,0 +1,91 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Editar conteúdo Chamada na página inicial</h2>
+            </div>
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/vis-home-contagem" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                </span>
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        <a class="dropdown-item" href="/vis-home-contagem">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+
+        <form method="POST" action="/update-home-contagem">
+            <input name="_id" type="hidden" value="{{homecontagem._id}}">
+
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo </label>
+                <input name="titulo" type="text" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.titulo}}" required>
+            </div>
+            <div class="form-group form-group col-md-8">
+                <label><span class="text-danger">*</span>Subtitulo</label>
+                <textarea name="subtitulo" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homecontagem.subtitulo}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Um </label>
+                <input name="titulonumum" type="text" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.titulonumum}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Numero Um </label>
+                <input name="numeroum" type="number" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.numeroum}}" required>
+            </div>
+
+             <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Dois </label>
+                <input name="titulonumdois" type="text" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.titulonumdois}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Numero Dois </label>
+                <input name="numerodois" type="number" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.numerodois}}" required>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Tres </label>
+                <input name="titulonumtres" type="text" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.titulonumtres}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Numero Tres </label>
+                <input name="numerotres" type="number" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.numerotres}}" required>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Quatro </label>
+                <input name="titulonumquatro" type="text" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.titulonumquatro}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Numero Quatro </label>
+                <input name="numeroquatro" type="number" class="form-control" id="tituloservum"
+                    placeholder="Titulo do ícone um" value="{{homecontagem.numeroquatro}}" required>
+            </div>
+
+
+
+            <p>
+                <span class="text-danger">* </span>Campo obrigatório
+            </p>
+            <button type="submit" class="btn btn-warning">Salvar</button>
+        </form>
+    </div>
+</div>

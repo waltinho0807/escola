@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Adicionar Video</h2>
+    <hr>
+    <form action="/video/postar-video" method="POST">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Titulo" name="titulo" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Descrição" name="descricao">
+        </div>
+        <div class="form-group col-md-6">
+            <textarea id="" cols="30" rows="7" class="form-control" placeholder="Video" name="video"
+                required></textarea>
+        </div>
+
+        <div class="form-group col-md-6">
+            <div class="form-field">
+                <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="serie_video" id="serie_video" class="form-control">
+                        {{#each serie}}
+                        <option value="{{_id}}">{{titulo}}</option>
+                        {{else}}
+                        <option>Nada encontrado</option>
+                        {{/each}}
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <input type="submit" value="Cadastrar" class="btn btn-primary py-3 px-5">
+        </div>
+    </form>
+    <hr>
+</div>
+</div>

@@ -1,0 +1,43 @@
+
+            <div class="container">
+            <img class="img-fluid" src="/images/blog/{{blog.imagem}}">
+            </div>
+<div class="container">
+<form action="/blog/update-blog" method="POST" >
+<input type="hidden" name="id" value="{{blog._id}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Titulo" name="titulo" value="{{blog.titulo}}"required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" value="{{blog.subtitulo}}" required>
+    </div>
+
+    <div class="form-group">
+        <textarea  id="" cols="30" rows="7" class="form-control" value="" placeholder="descricao-topo"
+            name="descricaotopo" required>{{blog.desctopo}}</textarea>
+    </div>
+    <div class="form-group">
+        <textarea id="" cols="30" rows="7" class="form-control" placeholder="descricao"
+            name="descricao" value="" required>{{blog.descricao}}</textarea>
+    </div>
+    <div class="form-group">
+                            <div class="form-field">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="categoria" id="categoria" class="form-control">
+                                      
+                                        <option value="maternal">Maternal</option>
+                                        <option value="infantil">Infantil</option>
+                                        <option value="fundamental">Fundamental</option>
+                                        <option value="medio">Medio</option>
+                                        <option value="superior">Superior-EAD</option>
+                                        <option value="escola">Escola</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+    <div class="form-group">
+        <input type="submit" value="Postar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

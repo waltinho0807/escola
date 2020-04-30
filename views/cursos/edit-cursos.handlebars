@@ -1,0 +1,24 @@
+<div class="container">
+    
+<form action="/cursos/update-curso" method="POST" >
+<input type="hidden" name="id" value="{{curso.id}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="curso" value="{{curso.curso}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Url Curso" name="urlcurso" value="{{curso.urlcurso}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Periodo" name="periodo" value="{{curso.periodo}}" required>
+    </div>
+    <div class="form-group">
+        <textarea  id="" cols="30" rows="7" class="form-control" placeholder="Sobre o Curso"
+            name="desccurso" required>{{curso.desccurso}}</textarea>
+    </div>
+
+    
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

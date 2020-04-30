@@ -1,0 +1,71 @@
+<div class="container">
+    <h2>Editar Livro</h2>
+    <hr>
+<form action="/biblioteca/update-livro" method="POST">
+     <input type="hidden" name="id" value="{{biblioteca._id}}">
+    <div class="form-group col-md-6">
+        <label for="titulo">Titulo</label>
+        <input type="text" class="form-control" placeholder="Titulo" name="titulo" value="{{biblioteca.titulo}}" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="editora">Editora</label>
+        <input type="text" class="form-control" placeholder="Editora" name="editora" value="{{biblioteca.editora}}" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="autor">Autor</label>
+        <input type="text" class="form-control" placeholder="Autor" name="autor" value="{{biblioteca.autor}}" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="ano">Ano</label>
+        <input type="text" class="form-control" placeholder="Ano" name="ano" value="{{biblioteca.ano}}" required>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="isbn">ISBN</label>
+        <input type="text" class="form-control" placeholder="ISBN" name="isbn" value="{{biblioteca.isbn}}" required>
+    </div>
+     
+     <!--<div class="form-group col-md-6">
+        <input type="file" class="form-control" placeholder="Imagem2" name="imagemdois" >
+    </div>   -->
+
+    <div class="form-group col-md-6">
+        <label for="descricao">Descrição</label>
+        <textarea  id="" cols="30" rows="7" class="form-control" placeholder="Descricao"
+            name="descricao" required>{{biblioteca.descricao}}</textarea>
+    </div>
+   
+    <div class="form-group col-md-6">
+                            <div class="form-field">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="categoria" id="categoria" class="form-control">
+                                       <option value="{{biblioteca.categoria}}">{{biblioteca.categoria}}</option>
+                                        <option value="maternal">Biografias</option>
+                                        <option value="infantil">Folclore</option>
+                                        <option value="fundamental">Romance</option>
+                                        <option value="medio">Poesia</option>
+                                        <option value="superior">Contos</option>
+                                        <option value="escola">Humor</option>
+                                        <option value="escola">Culinária</option>
+                                        <option value="escola">Pedagogia</option>
+                                        <option value="escola">Geografia</option>
+                                        <option value="escola">História Geral</option>
+                                        <option value="escola"> Literatura Brasileira</option>
+                                        <option value="escola"> Literatura Estrangeira</option>
+                                        <option value="escola"> Ensino de Idiomas</option>
+                                        <option value="escola">Biologia</option>
+                                        <option value="escola">Auto ajuda</option>
+                                        <option value="escola">Cinema</option>
+                                        <option value="escola">Enciclopédias</option>
+                                        <option value="escola">Didáticos</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                       
+    <div class="form-group col-md-6">
+        <input type="submit" value="Postar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

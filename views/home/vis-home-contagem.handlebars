@@ -1,0 +1,71 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Conteúdo da contagem na home</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/edit-home-contagem" class="btn btn-outline-warning btn-sm">Editar</a>
+                    <a href="/edit-home-contagem-img" class="btn btn-outline-warning btn-sm">Editar Imagem</a>
+                    
+                </span>
+                
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        <a class="dropdown-item" href="/edit-home-contagem">Editar</a>
+                        <a class="dropdown-item" href="//edit-home-contagem-img">Editar Img 1</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        <dl class="row">
+
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{homecontagem._id}}</dd>
+
+            <dt class="col-sm-3">Titulo </dt>
+            <dd class="col-sm-9">{{homecontagem.titulo}}</dd>
+
+            <dt class="col-sm-3">Subtitulo</dt>
+            <dd class="col-sm-9">{{homecontagem.subtitulo}} </dd>
+
+            <dt class="col-sm-3">Titulo Um</dt>
+            <dd class="col-sm-9">{{homecontagem.titulonumum}}</dd>
+
+            <dt class="col-sm-3">Numero Um</dt>
+            <dd class="col-sm-9">{{homecontagem.numeroum}}</dd>
+
+            <dt class="col-sm-3">Titulo Dois</dt>
+            <dd class="col-sm-9">{{homecontagem.titulonumdois}}</dd>
+
+            <dt class="col-sm-3">Numero Dois</dt>
+            <dd class="col-sm-9">{{homecontagem.numerodois}}</dd>
+
+            <dt class="col-sm-3">Titulo Tres</dt>
+            <dd class="col-sm-9">{{homecontagem.titulonumtres}}</dd>
+
+            <dt class="col-sm-3">Numero Tres</dt>
+            <dd class="col-sm-9">{{homecontagem.numerotres}}</dd>
+
+            <dt class="col-sm-3">Titulo Quatro</dt>
+            <dd class="col-sm-9">{{homecontagem.titulonumquatro}}</dd>
+
+            <dt class="col-sm-3">Numero Quatro</dt>
+            <dd class="col-sm-9">{{homecontagem.numeroquatro}}</dd>
+          
+
+            <dt class="col-sm-3">Imagem </dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/home/home_contagem.jpg"></dd>
+
+        </dl>
+    </div>
+</div>

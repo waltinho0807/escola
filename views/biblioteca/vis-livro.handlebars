@@ -1,0 +1,76 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Detalhes do livro</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                       <!--<a href="/blog/add-post" class="btn btn-outline-primary btn-sm">Adicionar post</a> 
+                        <a href="/blog/edit-page-img" class="btn btn-outline-warning btn-sm">Editar Img blog</a>
+                        <a href="/blog/edit-vis-img" class="btn btn-outline-warning btn-sm">Editar Img vis blog</a>
+                        -->
+                </span>
+                
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        
+                        <a class="dropdown-item" href="/edit-blog">Editar Img 1</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        
+        
+        <dl class="row">
+            
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{biblioteca._id}}</dd>
+
+            <dt class="col-sm-3">Titulo </dt>
+            <dd class="col-sm-9">{{biblioteca.titulo}}</dd>
+
+            <dt class="col-sm-3">Editora</dt>
+            <dd class="col-sm-9">{{biblioteca.subtitulo}} </dd>
+
+            <dt class="col-sm-3">Autor</dt>
+            <dd class="col-sm-9">{{biblioteca.desctopo}}</dd>
+
+            <dt class="col-sm-3">Ano</dt>
+            <dd class="col-sm-9">{{biblioteca.ano}}</dd>
+
+            <dt class="col-sm-3">ISBN</dt>
+            <dd class="col-sm-9">{{biblioteca.isbn}}</dd>
+
+            <dt class="col-sm-3">Descrição</dt>
+            <dd class="col-sm-9">{{biblioteca.descricao}}</dd>
+          
+            <dt class="col-sm-3">Categoria</dt>
+            <dd class="col-sm-9">{{biblioteca.categoria}}</dd>
+
+            <dt class="col-sm-3">Adicionado em</dt>
+            <dd class="col-sm-9">{{biblioteca.created}}</dd>
+
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9">{{biblioteca.status}}</dd>
+
+            <dt class="col-sm-3">Foto Capa </dt>
+            <dd class="col-sm-9"><img class="circle" src="/images/biblioteca/{{biblioteca.fotocapa}}" width="160" height="160"></dd>
+            
+        </dl>
+        </dl>
+        <a href="/biblioteca" class="btn btn-warning">Voltar</a>
+        
+        
+       <hr>
+       
+    </div>
+</div>

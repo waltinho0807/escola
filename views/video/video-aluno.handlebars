@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="jumbotron video">
+    <div class="container">
+        {{#each video.docs}}
+        <h2 class="display-4 text-center video-titulo" style="margin-bottom: 40px;">{{titulo}}</h2>
+        <p class="lead text-center video-parag">{{descricao}}</p>
+        <div class="row justify-content-md-center video-cont">
+
+            <div class="col-12 col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    {{{video}}}
+                </div>
+            </div>
+        </div>
+        <hr>
+        {{/each}}
+    </div>
+</div>
+
+   <nav aria-label="paginacao">
+                <ul class="pagination pagination-sm justify-content-center">
+                    {{#if video.hasPrevPage}}
+                    <li class="page-item">
+                        <a class="page-link" href="/video" tabindex="-1">Primeira</a>
+                    </li>
+                    <li class="page-item"><a class="page-link"
+                            href="/video?page={{video.prevPage}}">{{video.prevPage}}</a></li>
+                    {{else}}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Primeira</a>
+                    </li>
+                    {{/if}}
+
+                    <li class="page-item active">
+                        <a class="page-link" href="#">{{video.page}}</a>
+                    </li>
+
+                    {{#if video.hasNextPage}}
+                    <li class="page-item"><a class="page-link"
+                            href="/video?page={{video.nextPage}}">{{video.nextPage}}</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="/video?page={{video.totalPages}}">Última</a>
+                    </li>
+                    {{else}}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Última</a>
+                    </li>
+                    {{/if}}
+
+
+                </ul>
+            </nav>
+</div>

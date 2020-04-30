@@ -1,0 +1,81 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Lista de Alunos</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/responsaveis/cadastrar-aluno" class="btn btn-outline-primary btn-sm">Cadastrar
+                        Aluno.</a>
+                </span>
+
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+
+                        <a class="dropdown-item" href="/edit-blog">Editar Img 1</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        {{img_aluno}}
+
+        {{#each aluno.docs}}
+        <dl class="row">
+
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{_id}}</dd>
+
+            <dt class="col-sm-3">Nome </dt>
+            <dd class="col-sm-9">{{nome}}</dd>
+
+            <dt class="col-sm-3">E-mail</dt>
+            <dd class="col-sm-9">{{email}} </dd>
+
+            <dt class="col-sm-3">CPF</dt>
+            <dd class="col-sm-9">{{cpf}}</dd>
+
+            <dt class="col-sm-3">Registro aluno</dt>
+            <dd class="col-sm-9">{{ra}}</dd>
+
+            <dt class="col-sm-3">Serie</dt>
+            <dd class="col-sm-9">{{serie}}</dd>
+
+            <dt class="col-sm-3">Registro Responsavel</dt>
+            <dd class="col-sm-9">{{rr_responsavel}}</dd>
+
+
+            
+            <dt class="col-sm-3">Foto Aluno </dt>
+            <dd class="col-sm-9"><img class="rounded-circle" src="/images/aluno/{{foto_aluno}}" width="160"
+                    height="160">
+            </dd>
+            
+
+        </dl>
+        <div class="p-2">
+            <span class="d-none d-md-block">
+                <a href="/responsaveis/img-aluno/{{_id}}" class="btn btn-outline-primary btn-sm">Foto Perfil</a>
+                <a href="/responsaveis/delete-aluno/{{_id}}" class="btn btn-outline-danger btn-sm">Excluir Aluno</a>
+            </span>
+
+        </div>
+        <hr>
+        {{/each}}
+
+
+        <a href="/biblioteca" class="btn btn-warning">Voltar</a>
+
+
+        <hr>
+
+    </div>
+</div>

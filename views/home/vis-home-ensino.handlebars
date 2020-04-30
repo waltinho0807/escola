@@ -1,0 +1,104 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Conteúdo Ensino inicial</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/edit-home-ensino" class="btn btn-outline-warning btn-sm">Editar</a>
+                    <a href="/edit-home-ensino-img-infantil" class="btn btn-outline-warning btn-sm">Img Infantil</a>
+                    <a href="/edit-home-ensino-img-fundamental" class="btn btn-outline-warning btn-sm">Img Fundamental</a>
+                    <a href="/edit-home-ensino-img-medio" class="btn btn-outline-warning btn-sm">Img Medio</a>
+                    <a href="/edit-home-ensino-img-superior" class="btn btn-outline-warning btn-sm">Img Superior</a>
+                </span>
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        <a class="dropdown-item" href="/edit-home-serv">Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        <dl class="row">
+
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{homeensino._id}}</dd>
+
+            <dt class="col-sm-3">Subtitulo</dt>
+            <dd class="col-sm-9">{{homeensino.subtitulo}}</dd>
+
+            <dt class="col-sm-3">Titulo Infantil</dt>
+            <dd class="col-sm-9">{{homeensino.tituloum}} </dd>
+
+            <dt class="col-sm-3">Descrição infantil</dt>
+            <dd class="col-sm-9">{{homeensino.descumensino}}</dd>
+
+            <dt class="col-sm-3">Titulo Botão infantil</dt>
+            <dd class="col-sm-9">{{homeensino.titulobtnum}}</dd>
+
+            <dt class="col-sm-3">Url Botão infantil</dt>
+            <dd class="col-sm-9">{{homeensino.urlbtnum}} </dd>
+
+            <dt class="col-sm-3">Titulo Fundamental</dt>
+            <dd class="col-sm-9">{{homeensino.titulodois}}</dd>
+
+            <dt class="col-sm-3">Descrição fundamental </dt>
+            <dd class="col-sm-9">{{homeensino.descdois}}</dd>
+
+            <dt class="col-sm-3">Titulo Botão fundamental</dt>
+            <dd class="col-sm-9">{{homeensino.titulobtndois}}</dd>
+
+            <dt class="col-sm-3">Subtitulo 2 </dt>
+            <dd class="col-sm-9">{{homeensino.descservdois}}</dd>
+
+            <dt class="col-sm-3">Url botão fundamental</dt>
+            <dd class="col-sm-9">{{homeensino.urlbtndois}} </dd>
+
+            <dt class="col-sm-3">Titulo médio </dt>
+            <dd class="col-sm-9">{{homeensino.titulotres}}</dd>
+
+            <dt class="col-sm-3">Descrição Médio</dt>
+            <dd class="col-sm-9">{{homeensino.desctres}} </dd>
+
+            <dt class="col-sm-3">Titulo botão médio </dt>
+            <dd class="col-sm-9">{{homeensino.titulobtntres}}</dd>
+
+            <dt class="col-sm-3">Url btn Médio</dt>
+            <dd class="col-sm-9">{{homeensino.urlbtntres}} </dd>
+
+            <dt class="col-sm-3">Titulo Superior </dt>
+            <dd class="col-sm-9">{{homeensino.tituloquatro}}</dd>
+
+            <dt class="col-sm-3">Descrição Superior</dt>
+            <dd class="col-sm-9">{{homeensino.descquatro}} </dd>
+
+            <dt class="col-sm-3">Titulo botão Superior </dt>
+            <dd class="col-sm-9">{{homeensino.titulobtnquatro}}</dd>
+
+            <dt class="col-sm-3">Url btn Superior</dt>
+            <dd class="col-sm-9">{{homeensino.urlbtnquatro}} </dd>
+
+            <dt class="col-sm-3">Imagem Infantil </dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/home/ensino_infantil.jpg"></dd>
+
+            <dt class="col-sm-3">Imagem Fundamental </dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/home/ensino_fundamental.jpg"></dd>
+
+            <dt class="col-sm-3">Imagem Médio</dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/home/ensino_medio.jpg"></dd>
+
+            <dt class="col-sm-3">Imagem Superior</dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/home/ensino_superior.jpg"></dd>
+
+            
+
+        </dl>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="container">
+    <h2>Cadastrar Aluno</h2>
+    <hr>
+    <form action="/responsaveis/add-aluno" method="POST">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Nome" name="nome" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="CPF" name="cpf" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="E-mail" name="email">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Registro do aluno" name="ra" required>
+        </div>
+        <div class="form-group col-md-6">
+        <div class="form-field">
+            <div class="select-wrap">
+                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                <select name="rr_responsavel" id="rr_responsavel" class="form-control">
+                    {{#each responsavel}}
+                    <option value="{{_id}}">{{nome}}</option>
+                    {{else}}
+                    <option>Nada encontrado</option>
+                    {{/each}}
+
+                </select>
+            </div>
+        </div>
+         </div>
+
+          <div class="form-group col-md-6">
+        <div class="form-field">
+            <div class="select-wrap">
+                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                <select name="serie" id="serie" class="form-control">
+                    {{#each serie}}
+                    <option value="{{_id}}">{{titulo}}</option>
+                    {{else}}
+                    <option>Nada encontrado</option>
+                    {{/each}}
+
+                </select>
+            </div>
+        </div>
+         </div>
+         <!--
+        <div class="form-group col-md-6">
+            <div class="form-field">
+                <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="serie" id="categoria" class="form-control">
+                        <option value="">Selecione a serie</option>
+                        <option value="maternal">Maternal</option>
+                        <option value="primeirafase">1º fase</option>
+                        <option value="segundafase">2º Fase</option>
+                        <option value="primeirofund">1º Fundamental</option>
+                        <option value="segundofund">2º Fundamental</option>
+                        <option value="terceirofund">3º Fundamental</option>
+                        <option value="quartofund">4º Fundamental</option>
+                        <option value="quintofund">5º Fundamental</option>
+                        <option value="sextofund">6º Fundamental</option>
+                        <option value="setimofund">7º Fundamental</option>
+                        <option value="oitavofund">8º Fundamental</option>
+                        <option value="primeiromedio">1º Ensino medio</option>
+                        <option value="segundomedio">2º Ensino medio</option>
+                        <option value="terceiromedio">3º Ensino medio</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+-->
+        <div class="form-group col-md-6">
+            <input type="submit" value="Cadastrar" class="btn btn-primary py-3 px-5">
+        </div>
+    </form>
+    <hr>
+</div>
+</div>

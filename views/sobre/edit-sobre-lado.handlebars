@@ -1,0 +1,25 @@
+<div class="container">
+    
+<form action="/sobre/update-sobre-lado" method="POST" >
+<input type="hidden" name="id" value="{{sobrelado._id}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="titulo" value="{{sobrelado.titulo}}" required>
+    </div>
+    
+    <div class="form-group">
+        <textarea  id="" cols="30" rows="7" class="form-control" placeholder="Sobre o Curso"
+            name="desc" required>{{sobrelado.desc}}</textarea>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="titulobtn" value="{{sobrelado.titulobtn}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="urlbtn" value="{{sobrelado.urlbtn}}" required>
+    </div>
+
+    
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

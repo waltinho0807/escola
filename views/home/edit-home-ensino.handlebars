@@ -1,0 +1,125 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Editar conteúdo Ensino na página inicial</h2>
+            </div>
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/vis-home-ensino" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                </span>
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                        <a class="dropdown-item" href="/vis-home-ensino">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+
+        <form method="POST" action="/update-home-ensino">
+            <input name="_id" type="hidden" value="{{homeensino._id}}">
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span>Subtitulo</label>
+                <textarea name="subtitulo" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homeensino.subtitulo}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Infantil </label>
+                <input name="tituloum" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.tituloum}}" required>
+            </div>
+           <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span>Descrição Infantil</label>
+                <textarea name="descumensino" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homeensino.descumensino}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Botão Infantil </label>
+                <input name="titulobtnum" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulobtnum}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Url Botão Infantil </label>
+                <input name="urlbtnum" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.urlbtnum}}" required>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Fundamental</label>
+                <input name="titulodois" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulodois}}" required>
+            </div>
+           <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span>Descrição Fundamental</label>
+                <textarea name="descdois" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homeensino.descdois}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Botão Fundamental </label>
+                <input name="titulobtndois" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulobtndois}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Url Botão Fundamental </label>
+                <input name="urlbtndois" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.urlbtndois}}" required>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Médio </label>
+                <input name="titulotres" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulotres}}" required>
+            </div>
+           <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span>Descrição Médio</label>
+                <textarea name="desctres" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homeensino.desctres}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Botão Médio </label>
+                <input name="titulobtntres" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulobtntres}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Url Botão Médio </label>
+                <input name="urlbtntres" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.urlbtntres}}" required>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Superior </label>
+                <input name="tituloquatro" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.tituloquatro}}" required>
+            </div>
+           <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span>Descrição Superior</label>
+                <textarea name="descquatro" class="form-control" id="descservdois" placeholder="Descrição do ícone dois"
+                    rows="3">{{homeensino.descquatro}}</textarea>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Titulo Botão Superior </label>
+                <input name="titulobtnquatro" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.titulobtnquatro}}" required>
+            </div>
+            <div class="form-group col-md-8">
+                <label><span class="text-danger">*</span> Url Botão Superior </label>
+                <input name="urlbtnquatro" type="text" class="form-control" id="iconeservum"
+                    placeholder="Seletor do ícone um" value="{{homeensino.urlbtnquatro}}" required>
+            </div>
+
+
+
+            <p>
+                <span class="text-danger">* </span>Campo obrigatório
+            </p>
+            <button type="submit" class="btn btn-warning">Salvar</button>
+        </form>
+    </div>
+</div>

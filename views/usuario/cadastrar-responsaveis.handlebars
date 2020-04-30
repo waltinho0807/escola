@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Cadastrar Responsaveis</h2>
+    <hr>
+    <form action="/responsaveis/add-responsavel" method="POST">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Nome" name="nome" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="CPF" name="cpf" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="E-mail" name="email" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Senha" name="senha" required>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Registro" name="rr" required>
+        </div>
+           <div class="form-group col-md-6">
+                            <div class="form-field">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="acesso" id="categoria" class="form-control">
+                                       <option value="">Selecione o Nivel de acesso</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+        <div class="form-group col-md-6">
+            <input type="submit" value="Postar" class="btn btn-primary py-3 px-5">
+        </div>
+    </form>
+    <hr>
+</div>
+</div>

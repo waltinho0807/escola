@@ -1,0 +1,88 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Conteúdo da página sobre</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/sobre/edit-sobre-topo" class="btn btn-outline-warning btn-sm">Editar</a>
+                    <a href="/sobre/edit-sobretopo-img" class="btn btn-outline-warning btn-sm">Editar Imagem</a>
+                    
+                </span>
+                
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                         <a class="dropdown-item" href="/sobre/edit-sobre-topo">Editar </a>
+                        <a class="dropdown-item" href="/sobre/edit-sobretopo-img">Editar Img 1</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        
+        <dl class="row">
+            
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{sobretopo._id}}</dd>
+
+            <dt class="col-sm-3">Titulo Topo </dt>
+            <dd class="col-sm-9">{{sobretopo.titulotop}}</dd>
+
+            <dt class="col-sm-3">Subtitulo</dt>
+            <dd class="col-sm-9">{{sobretopo.subtitulotop}} </dd>
+
+            <dt class="col-sm-3">Titulo 1</dt>
+            <dd class="col-sm-9">{{sobretopo.tituloum}}</dd>
+
+            <dt class="col-sm-3">Descrção 1</dt>
+            <dd class="col-sm-9">{{sobretopo.descum}}</dd>
+
+            <dt class="col-sm-3">Titulo 2</dt>
+            <dd class="col-sm-9">{{sobretopo.titulodois}}</dd>
+
+            <dt class="col-sm-3">Descrção 2</dt>
+            <dd class="col-sm-9">{{sobretopo.descdois}}</dd>
+
+            <dt class="col-sm-3">Titulo 3</dt>
+            <dd class="col-sm-9">{{sobretopo.titulotres}}</dd>
+
+            <dt class="col-sm-3">Descrção 3</dt>
+            <dd class="col-sm-9">{{sobretopo.desctres}}</dd>
+
+            <dt class="col-sm-3">Titulo 4</dt>
+            <dd class="col-sm-9">{{sobretopo.tituloquatro}}</dd>
+
+            <dt class="col-sm-3">Descrção 4</dt>
+            <dd class="col-sm-9">{{sobretopo.descquatro}}</dd>
+
+            <dt class="col-sm-3">Titulo 5</dt>
+            <dd class="col-sm-9">{{sobretopo.titulocinco}}</dd>
+
+            <dt class="col-sm-3">Descrção 5</dt>
+            <dd class="col-sm-9">{{sobretopo.desccinco}}</dd>
+
+            <dt class="col-sm-3">Titulo 6</dt>
+            <dd class="col-sm-9">{{sobretopo.tituloseis}}</dd>
+
+            <dt class="col-sm-3">Descrção 6</dt>
+            <dd class="col-sm-9">{{sobretopo.descseis}}</dd>
+          
+
+            <dt class="col-sm-3">Imagem </dt>
+            <dd class="col-sm-9"><img class="img-fluid" src="/images/sobre/sobre.jpg"></dd>
+            
+        </dl>
+        
+        
+       <hr>
+        
+    </div>
+</div>

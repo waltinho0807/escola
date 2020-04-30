@@ -1,0 +1,52 @@
+<div class="content p-1">
+    <div class="list-group-item">
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Conteúdo da página Sobre coluna 2</h2>
+            </div>
+
+            <div class="p-2">
+                <span class="d-none d-md-block">
+                    <a href="/sobre/edit-sobre-lado" class="btn btn-outline-warning btn-sm">Editar</a>
+                    
+                    
+                </span>
+                
+                <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                         <a class="dropdown-item" href="/sobre/edit-sobre-lado">Editar </a>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{>_msg}}
+        <hr>
+        
+        <dl class="row">
+            
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">{{sobrelado._id}}</dd>
+
+            <dt class="col-sm-3">Titulo  </dt>
+            <dd class="col-sm-9">{{sobrelado.titulo}}</dd>
+
+            <dt class="col-sm-3">Descrição</dt>
+            <dd class="col-sm-9">{{sobrelado.desc}} </dd>
+
+            <dt class="col-sm-3">Titulo Botão</dt>
+            <dd class="col-sm-9">{{sobrelado.titulobtn}}</dd>
+
+            <dt class="col-sm-3">Url Botão</dt>
+            <dd class="col-sm-9">{{sobrelado.urlbtn}}</dd>
+
+           
+       <hr>
+        
+    </div>
+</div>

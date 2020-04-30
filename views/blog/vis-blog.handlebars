@@ -1,0 +1,156 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '783839938689016',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v6.0'
+    });
+  };
+</script>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0&appId=783839938689016&autoLogAppEvents=1"></script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/blog/page-img/vis_blog_page.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Blog Detalhes</h1>
+             <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="index.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">{{blog.titulo}}</h2>
+            <p>{{blog.desctopo}}</p>
+            <p>
+              <img src="/images/blog/{{blog.imagem}}" alt="" class="img-fluid">
+              <img src="/images/blog/{{blog.imagemdois}}" alt="" class="img-fluid">
+            </p>
+            
+            <p>{{blog.descricao}}</p>
+
+            
+            <div class="fb-like" data-href="http://localhost:8080/blog/vis-blog/{{blog._id}}" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+            
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+              <div class="tagcloud">
+                <a href="/blog/categoria/superior" class="tag-cloud-link">Superior</a>
+                <a href="/blog/categoria/infantil" class="tag-cloud-link">Infantil</a>
+                <a href="/blog/categoria/medio" class="tag-cloud-link">Médio</a>
+                <a href="/blog/categoria/escola" class="tag-cloud-link">Escola</a>
+              </div>
+            </div>
+            
+            <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img src="/images/a_fundo5.jpg" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>Venha Nos Conhecer!</h3>
+                <p>Faça-nos uma visita e conheça pessoalmente tudo o que temos a oferecer!Temos um quadro de profissionais completo, formado por professores, pedagogos, psicólogos, fonoaudiólogos, especialistas em educação.!</p>
+              </div>
+            </div>
+
+
+            <div class="pt-5 mt-5">
+              <h3 class="mb-5 h4 font-weight-bold">Comentarios</h3>
+              <ul class="comment-list">
+               <div class="fb-comments" data-href="http://localhost:8080/blog/vis-blog/{{blog._id}}" data-numposts="5" data-width=""></div>                                                                  
+              <!-- END comment-list -->
+              
+              
+            </div>
+          </div> <!-- .col-md-8 -->
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+              <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon icon-search"></span>
+                  <input type="text" class="form-control" placeholder="Pesquisar">
+                </div>
+              </form>
+            </div>
+            <div class="sidebar-box ftco-animate">
+            	<h3>Categoria</h3>
+              <ul class="categories">
+                <li><a href="#">Superior <span>(6)</span></a></li>
+                <li><a href="#">Infantil <span>(8)</span></a></li>
+                <li><a href="#">Idioma <span>(2)</span></a></li>
+                <li><a href="#">Esportes <span>(2)</span></a></li>
+                <li><a href="#">Dança <span>(2)</span></a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3>Artigos Populares</h3>
+
+               {{#each blog_vs.docs}}
+
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(/images/blog/{{imagem}});"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="/blog/vis-blog/{{_id}}">{{titulo}}</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Jan. 27, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+             
+              {{/each}}
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3>Tag Cloud</h3>
+              <ul class="tagcloud m-0 p-0">
+                <a href="/blog/tag/baleaereo" class="tag-cloud-link">Balé Aereo</a>
+                <a href="/blog/tag/bale" class="tag-cloud-link">Balé</a>
+                <a href="/blog/tag/futsal" class="tag-cloud-link">Futsal</a>
+                <a href="/blog/tag/judo" class="tag-cloud-link">Judô</a>
+                <a href="/blog/tag/muaytai" class="tag-cloud-link">Muay tai</a>
+                <a href="/blog/tag/violao" class="tag-cloud-link">Violão</a>
+                <a href="/blog/tag/maternal" class="tag-cloud-link">Maternal</a>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+            	<h3>Arquivos</h3>
+              <ul class="categories">
+              	<li><a href="#">Janeiro 2020 <span>(30)</span></a></li>
+              	<li><a href="#">Fevereiro 2020 <span>(20)</span></a></li>
+                <li><a href="#">Março 2020 <span>(6)</span></a></li>
+                <li><a href="#">Abril 2020 <span>(8)</span></a></li>
+              </ul>
+            </div>
+
+
+            <div class="sidebar-box ftco-animate">
+              <h3>Nosso Ensino:</h3>
+              <p>O Colégio Novo Milleniun é Ético Sistema de Ensino!Tradição em aprovações e ensinamentos para a vida toda.Vem ser Milleniun! Garanta a sua matrícula.Da Educação Infantil ao Ensino Médio. Afeto ao educar, tradição em ensinar.</p>
+            </div>
+          </div><!-- END COL -->
+        </div>
+			</div>
+		</section>
+{{>_footer}}

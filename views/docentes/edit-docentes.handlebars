@@ -1,0 +1,34 @@
+<div class="container">
+<form action="/docentes/update-docentes" method="POST" >
+    <input type="hidden" class="form-control" placeholder="Nome" value="{{docentes.id}}" name="id" >
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nome" value="{{docentes.nome}}" name="nome">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Aula ou disciplina" value="{{docentes.aula}}" name="aula" >
+    </div>
+    
+      
+    <div class="form-group">
+        <textarea id="" cols="30" rows="7" class="form-control" placeholder="descrição" 
+            name="descricao" >{{docentes.desc}}</textarea>
+    </div>
+    <label for="facebook">Facebook</label>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link do perfil Facebook" value="{{docentes.facebook}}" name="facebook" >
+    </div>
+    <label for="instagram">Instagram</label>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link do perfil Instagran" value="{{docentes.facebook}}" name="instagram">
+    </div>
+    <label for="tweeter">Tweeter</label>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link do perfil Tweeter" value="{{docentes.tweeter}}" name="tweeter" >
+    </div>
+    
+   
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

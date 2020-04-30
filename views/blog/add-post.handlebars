@@ -1,0 +1,62 @@
+<div class="container">
+<form action="criar-post" method="POST" enctype="multipart/form-data">
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" placeholder="Titulo" name="titulo" required>
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" required>
+    </div>
+     <div class="form-group col-md-6">
+        <input type="file" class="form-control" placeholder="Imagem" name="imagem" required>
+    </div> 
+
+     <!--<div class="form-group col-md-6">
+        <input type="file" class="form-control" placeholder="Imagem2" name="imagemdois" >
+    </div>   -->
+
+    <div class="form-group col-md-6">
+        <textarea  id="" cols="30" rows="7" class="form-control" placeholder="descricao-topo"
+            name="descricaotopo" required></textarea>
+    </div>
+    <div class="form-group col-md-6">
+        <textarea id="" cols="30" rows="7" class="form-control" placeholder="descricao"
+            name="descricao" required></textarea>
+    </div>
+    <div class="form-group col-md-6">
+                            <div class="form-field">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="categoria" id="categoria" class="form-control">
+                                       <option value="">Selecione Categoria</option>
+                                        <option value="maternal">Maternal</option>
+                                        <option value="infantil">Infantil</option>
+                                        <option value="fundamental">Fundamental</option>
+                                        <option value="medio">Medio</option>
+                                        <option value="superior">Superior-EAD</option>
+                                        <option value="escola">Escola</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="form-field">
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="tag" id="categoria" class="form-control">
+                                       <option value="">Selecione a Tag</option>
+                                        <option value="baleaereo">Balé Aereo</option>
+                                        <option value="bale">Balé</option>
+                                        <option value="maternal">Maternal</option>
+                                        <option value="futsal">Futsal</option>
+                                        <option value="violao">Violão</option>
+                                        <option value="judo">Judô</option>
+                                        <option value="muaitai">Muay Tai</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+    <div class="form-group col-md-6">
+        <input type="submit" value="Postar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    
+<form action="/contato/update-contato" method="POST" >
+<input type="hidden" name="id" value="{{contatopg._id}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="endereco" value="{{contatopg.endereco}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="telefone" value="{{contatopg.telefone}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="email" value="{{contatopg.email}}" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Curso" name="site" value="{{contatopg.site}}" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary py-3 px-5">
+    </div>
+</form>
+</div>
